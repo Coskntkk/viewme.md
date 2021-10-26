@@ -1,0 +1,22 @@
+footer {
+  height: 6%;
+}
+
+.nav-f {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright {
+  display: inline-inline-block;
+  margin: 0 20px 0 0;
+}
+
+footer p {
+  color: white;
+}
+
+.github {
+  color: white;
+}

@@ -1,0 +1,12 @@
+header {
+  height: 8%;
+}
+
+header nav {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-inner {
+  margin: auto 3%;
+}
