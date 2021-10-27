@@ -7,16 +7,10 @@ An online markdown editor for readme files.
 ## Features
 
 - Support for writing markdown and html mixed
-
+- Downloading created file
   
 ## Roadmap
 
-- support for <code> blocks
-
 - Pre-written templates of markdown
-
-- Downloading created file
-
-- Home page
-
+- Home page (canceled)
   
