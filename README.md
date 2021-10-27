@@ -1,22 +1,17 @@
 
 # Viewme.md
 
-An online markdown editor for readme files.
+An online markdown editor for readme files.  
+https://coskntkk.github.io/viewme.md/
 
 
 ## Features
 
 - Support for writing markdown and html mixed
-
+- Downloading created file
   
 ## Roadmap
 
-- support for <code> blocks
-
 - Pre-written templates of markdown
-
-- Downloading created file
-
-- Home page
-
+- Home page (canceled)
   
