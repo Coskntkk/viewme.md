@@ -19,6 +19,8 @@
   <!-- Local CSS -->
   <link rel="stylesheet" href="css\style.css">
   <link rel="stylesheet" href="css\content.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="icon\icon.ico.png">
 
   <title>Viewme.md</title>
 </head>
@@ -28,7 +30,10 @@
   <header>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid nav-inner">
-        <a class="navbar-brand brand" href="#">Viewme.md</a>
+        <a class="navbar-brand" href="#">
+          <img src="icon\icon.ico.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+          Viewme.md
+        </a>
         <div class="d-flex nav-end">
           <button type="button" onclick="download()" class="btn btn-secondary"><i class="fas fa-download"></i> README.md</button>
         </div>
@@ -75,13 +80,13 @@
         <div class="collapse" id="lists">
           <div class="quickWithInput">
             <div class="quickInput">
-              <input class="quickInp" type="number" id="olLine"  placeholder="Lines:" min="0" max="10">
+              <input class="quickInp" type="number" id="olLine" placeholder="Lines:" min="0" max="10">
             </div>
             <button type="button" class="btn btn-light innerQuick" onclick="ol()">Ordered List</button>
           </div>
           <div class="quickWithInput">
             <div class="quickInput">
-              <input class="quickInp" type="number" id="ulLine"  placeholder="Lines:" min="0" max="10">
+              <input class="quickInp" type="number" id="ulLine" placeholder="Lines:" min="0" max="10">
             </div>
             <button type="button" class="btn btn-light innerQuick" onclick="ul()">Unordered List</button>
           </div>
@@ -116,8 +121,8 @@
           <button type="button" class="btn btn-light quick" onclick="link(2)">Markdown Image</button>
           <div class="quickWithInput">
             <div class="quickInput">
-              <input class="quickSize" type="number" id="imgH"  placeholder="Height:" min="0" step="5">
-              <input class="quickSize" type="number" id="imgV"  placeholder="Width:" min="0" step="5">
+              <input class="quickSize" type="number" id="imgH" placeholder="Height:" min="0" step="5">
+              <input class="quickSize" type="number" id="imgV" placeholder="Width:" min="0" step="5">
             </div>
             <button type="button" class="btn btn-light innerQuick" onclick="img()">HTML Image</button>
           </div>
@@ -127,7 +132,7 @@
 
       </div>
 
-      <div id="edit" class="col overflow-auto col-md-12 editor">
+      <div id="edit" class="col col-md-12 overflow-auto editor">
         <div id="aceEditor"></div>
       </div>
 
