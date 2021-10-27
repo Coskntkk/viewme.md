@@ -30,6 +30,12 @@
   height: 1.5rem;
 }
 
+.quickSize {
+  width: 48%;
+  display: inline;
+  margin: 0 0 3% 0;
+}
+
 /* Editor */
 .editor {
   width: 44%;
