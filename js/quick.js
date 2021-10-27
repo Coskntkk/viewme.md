@@ -64,7 +64,7 @@ function link(t) {
   if (t == 2){
     pref = "!";
   }
-  let final = nl + pref + "[ Display Text ]( Link )" + nl;
+  let final = nl + pref + "[ Display Text ]( https://youtu.be/dQw4w9WgXcQ )" + nl;
   updateMd(final);
 }
 
