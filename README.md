@@ -9,9 +9,15 @@ https://coskntkk.github.io/viewme.md/
 
 - Support for writing markdown and html mixed
 - Downloading created file
+- Quick templates of markdown elements
+  
   
 ## Roadmap
 
-- Pre-written templates of markdown
-- Home page (canceled)
-  
+- ~~Home page~~ (canceled)
+- Themes
+- More quick templates:
+    - Tables
+    - Definition Lists
+    - Task Lists
+    - Strikethrough & underlines
