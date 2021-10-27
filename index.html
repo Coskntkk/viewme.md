@@ -53,14 +53,77 @@
           <button type="button" class="btn btn-light quick" onclick="h(6)">Heading level 6</button>
         </div>
 
-        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#emphasis" aria-expanded="false" aria-controls="collapseExample">
           Emphasis
         </button>
-        <div class="collapse" id="collapseExample">
+        <div class="collapse" id="emphasis">
           <button type="button" class="btn btn-light quick" onclick="emp(2)">Bold</button>
           <button type="button" class="btn btn-light quick" onclick="emp(1)">Italic</button>
           <button type="button" class="btn btn-light quick" onclick="emp(3)">Italic & Bold</button>
         </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#blockquote" aria-expanded="false" aria-controls="collapseExample">
+          Blockquote
+        </button>
+        <div class="collapse" id="blockquote">
+          <button type="button" class="btn btn-light quick" onclick="bq()">Blockquote</button>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#lists" aria-expanded="false" aria-controls="collapseExample">
+          Lists
+        </button>
+        <div class="collapse" id="lists">
+          <div class="quickWithInput">
+            <div class="quickInput">
+              <input class="quickInp" type="number" id="olLine"  placeholder="Lines:" min="0" max="10">
+            </div>
+            <button type="button" class="btn btn-light innerQuick" onclick="ol()">Ordered List</button>
+          </div>
+          <div class="quickWithInput">
+            <div class="quickInput">
+              <input class="quickInp" type="number" id="ulLine"  placeholder="Lines:" min="0" max="10">
+            </div>
+            <button type="button" class="btn btn-light innerQuick" onclick="ul()">Unordered List</button>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#code" aria-expanded="false" aria-controls="collapseExample">
+          Code
+        </button>
+        <div class="collapse" id="code">
+          <button type="button" class="btn btn-light quick" onclick="code(1)">Inline Code</button>
+          <button type="button" class="btn btn-light quick" onclick="code(2)">Code Block</button>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#hr" aria-expanded="false" aria-controls="collapseExample">
+          Horizontal Rule
+        </button>
+        <div class="collapse" id="hr">
+          <button type="button" class="btn btn-light quick" onclick="hr()">Horizontal Rule</button>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#links" aria-expanded="false" aria-controls="collapseExample">
+          Links
+        </button>
+        <div class="collapse" id="links">
+          <button type="button" class="btn btn-light quick" onclick="link(1)">Link</button>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#images" aria-expanded="false" aria-controls="collapseExample">
+          Images
+        </button>
+        <div class="collapse" id="images">
+          <button type="button" class="btn btn-light quick" onclick="link(2)">Markdown Image</button>
+          <div class="quickWithInput">
+            <div class="quickInput">
+              <input class="quickInp" type="number" id="imgH"  placeholder="Height:" min="0" step="5">
+              <input class="quickInp" type="number" id="imgV"  placeholder="Width:" min="0" step="5">
+            </div>
+            <button type="button" class="btn btn-light innerQuick" onclick="img()">HTML Image</button>
+          </div>
+        </div>
+
+        <a class="btn btn-success collapseBtn" href="https://www.markdownguide.org/basic-syntax" target="_blank">Markdown Guide</a>
 
       </div>
 
