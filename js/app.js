@@ -1,39 +1,37 @@
-
-marked.setOptions({
-  renderer: new marked.Renderer(),
-  langPrefix: 'language-', // highlight.js css expects a top-level 'hljs' class.
-  pedantic: false,
-  gfm: true,
-  breaks: true,
-  sanitize: false,
-  smartLists: true,
-  smartypants: false,
-  xhtml: false
-});
-
-let isEdited = false;
-
-
 // Setup editor
-let editor = ace.edit('editor');
+let editor = ace.edit('aceEditor');
 editor.getSession().setUseWrapMode(true);
-editor.renderer.setScrollMargin(10, 10, 10, 10);
+editor.renderer.setScrollMargin(10, 5, 10, 5);
 editor.setOptions({
   maxLines: Infinity,
   indentedSoftWrap: false,
-  fontSize: 14,
-  wrapBehavioursEnabled: true,
-  // TODO consider some options
-});
-editor.on('change', () => {
-  isEdited = true;
-  convert();
+  fontSize: 14
 });
 
-let convert = () => {
-  let html = marked(editor.getValue());
-  let sanitized = DOMPurify.sanitize(html);
-  $('#output').html(sanitized);
+let isEdited = false;
+editor.on('change', () => {
+  isEdited = true;
+  renderMd();
+});
+
+// Render
+function renderMd() {
+  $('#output').html(DOMPurify.sanitize(marked(editor.getValue())));
+}
+
+// Download
+function download() {
+  let filename = "README.md";
+  let text = editor.getValue();
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+  document.body.removeChild(element);
 }
 
 /*
@@ -45,8 +43,11 @@ $(window).bind('beforeunload', function() {
 });
 */
 
-convert();
+// Welcome script
+let welcomeScript = `# Welcome to Viewme.md Markdown Editor
 
-function download(){
-  alert("working")
-}
+Start typing or use buttons to add quick templates.
+`;
+editor.setValue(welcomeScript);
+editor.gotoLine(editor.session.getLength());
+renderMd();

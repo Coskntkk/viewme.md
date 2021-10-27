@@ -9,3 +9,41 @@ main {
   height: 86%;
   width: 100%;
 }
+
+/* Header */
+header {
+  height: 8%;
+}
+
+header nav {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-inner {
+  margin: auto 3%;
+}
+
+/* Footer */
+footer {
+  height: 6%;
+}
+
+.nav-f {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+footer p {
+  color: white;
+}
+
+.github {
+  color: white;
+}

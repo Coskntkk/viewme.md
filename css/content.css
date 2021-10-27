@@ -1,0 +1,45 @@
+/* Sidebar */
+.sidebar {
+  background-color: lightgrey;
+  width: 12%;
+  height: 100%;
+  padding: 1px;
+}
+
+.collapseBtn {
+  width: 98%;
+  margin: 1%;
+}
+
+.quick {
+  width: 90%;
+  margin: 5% 5% 2.5%;
+}
+
+/* Editor */
+.editor {
+  width: 44%;
+  height: 100%;
+  padding: 1%;
+}
+
+#editor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 1px black;
+}
+
+/* Preview */
+.preview {
+  width: 44%;
+  height: 100%;
+  padding: 1%;
+  border-left: solid 1px black;
+}
+
+#preview {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
