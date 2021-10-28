@@ -61,16 +61,58 @@ function hr() {
 
 function link(t) {
   let pref = "";
-  if (t == 2){
+  let link = "https://youtu.be/dQw4w9WgXcQ";
+  if (t == 2) {
     pref = "!";
+    link = "https://raw.githubusercontent.com/Coskntkk/viewme.md/main/icon/icon.ico.png";
+  } else if (t == 3) {
+    link = $("#linkUrl").val();
   }
-  let final = nl + pref + "[ Display Text ]( https://youtu.be/dQw4w9WgXcQ )" + nl;
+  let final = nl + pref + `[ Display Text ]( ${link} )` + nl;
   updateMd(final);
 }
 
-function img() {
-  let height = $("#imgH").val();
-  let width = $("#imgV").val();
-  final = nl + `<img src="image adress" alt="alt text" width="${width}" height="${height}">` + nl;
+function img(t) {
+  let [ imgHeight, imgWidth, imgUrl ] = [ $("#imgH").val(), $("#imgV").val(), $("#imgURL").val() ];
+  final = nl + `<img src="${imgUrl}" alt="alt text" width="${imgWidth}px" height="${imgHeight}px">` + nl;
+  $("#imgH").val("");
+  $("#imgV").val("");
+  $("#imgURL").val("");
+  updateMd(final);
+}
+
+function tbl(t) {
+  let final = "";
+  if (t == 1){
+    final = nl + `| Heading | Heading |
+| --- | --- |
+| Item | Item |
+| Item | Item |`
+} else if (t == 2 && $("#tableC").val()>0 && $("#tableR").val()>0) {
+  let tCols = $("#tableC").val();
+  let tRows = $("#tableR").val();
+  final = nl + "|" + " Heading |".repeat(tCols) + nl + "|" + " ----- | ".repeat(tCols) + nl;
+  final += ("|" + " Item |".repeat(tCols) + nl).repeat(tRows);
+  $("#tableC").val(0);
+  $("#tableR").val(0);
+}
+  updateMd(final);
+}
+
+function tList(){
+  let final = nl + `- [x] Task 1
+- [ ] Task 2
+- [ ] Task 3` + nl;
+updateMd(final);
+}
+
+function line(t){
+  let [ tag1, tag2, final ] = [ "~~", "~~", "" ];
+  if (t == 1){
+    final = nl + tag1 + "Styled text" + tag2 + nl;
+  } else if (t == 2) {
+    [ tag1, tag2, final] = ["<", "ins>", ""];
+    final = nl + tag1 + tag2 + "Styled text" + tag1 + "/" + tag2 + nl;
+  }
   updateMd(final);
 }

@@ -112,6 +112,12 @@
         </button>
         <div class="collapse" id="links">
           <button type="button" class="btn btn-light quick" onclick="link(1)">Link</button>
+          <div class="quickWithInput">
+            <div class="quickInput">
+              <input class="quickInp" type="text" id="linkUrl" placeholder="URL:">
+            </div>
+            <button type="button" class="btn btn-light innerQuick" onclick="link(3)">Quick Link</button>
+          </div>
         </div>
 
         <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#images" aria-expanded="false" aria-controls="collapseExample">
@@ -123,13 +129,44 @@
             <div class="quickInput">
               <input class="quickSize" type="number" id="imgH" placeholder="Height:" min="0" step="5">
               <input class="quickSize" type="number" id="imgV" placeholder="Width:" min="0" step="5">
+              <input class="quickInp" type="text" id="imgURL" placeholder="URL:">
             </div>
-            <button type="button" class="btn btn-light innerQuick" onclick="img()">HTML Image</button>
+            <button type="button" class="btn btn-light innerQuick" onclick="img(2)">Custom Image</button>
           </div>
         </div>
 
-        <a class="btn btn-success collapseBtn" href="https://www.markdownguide.org/basic-syntax" target="_blank">Markdown Guide</a>
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#tables" aria-expanded="false" aria-controls="collapseExample">
+          Tables
+        </button>
+        <div class="collapse" id="tables">
+          <button type="button" class="btn btn-light quick" onclick="tbl(1)">Quick Table</button>
+          <div class="quickWithInput">
+            <div class="quickInput">
+              <input class="quickSize" type="number" id="tableC" placeholder="Columns:" min="0">
+              <input class="quickSize" type="number" id="tableR" placeholder="Rows:" min="0">
+            </div>
+            <button type="button" class="btn btn-light innerQuick" onclick="tbl(2)">Custom Table</button>
+          </div>
+        </div>
 
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#taskList" aria-expanded="false" aria-controls="collapseExample">
+          Task List
+        </button>
+        <div class="collapse" id="taskList">
+          <button type="button" class="btn btn-light quick" onclick="tList()">Task List</button>
+        </div>
+
+        <button class="btn btn-secondary collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#lines" aria-expanded="false" aria-controls="collapseExample">
+          Lines
+        </button>
+        <div class="collapse" id="lines">
+          <button type="button" class="btn btn-light quick" onclick="line(1)">Strikethrough</button>
+          <button type="button" class="btn btn-light quick" onclick="line(2)">Underline</button>
+        </div>
+
+
+
+        <a class="btn btn-success collapseBtn" href="https://www.markdownguide.org/basic-syntax" target="_blank">Markdown Guide</a>
       </div>
 
       <div id="edit" class="col col-md-12 overflow-auto editor">
