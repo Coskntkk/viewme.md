@@ -20,11 +20,8 @@ https://coskntkk.github.io/viewme.md/
     - Tables
     - [x] Task Lists
     - ~~Strikethrough~~ & <ins>underlines</ins>
-
+- Day & Night Themes
 
 ## Roadmap
 
-- ~~Home page~~ (canceled)
-- Themes
-- More quick templates:
-    - ~~Definition Lists~~ (canceled)
+- Open for suggestions

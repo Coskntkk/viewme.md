@@ -7,8 +7,10 @@
 }
 
 .collapseBtn {
-  width: 98%;
-  margin: 1%;
+  width: 100%;
+  border: solid black 1px;
+  border-radius: 0;
+  height: 6%;
 }
 
 .quick, .quickWithInput {
@@ -36,12 +38,24 @@
   margin: 0 0 2% 0;
 }
 
+/* Light / Dark mode */
+.modeBtn {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+#modeIcon {
+  color: orange;
+}
+
 /* Editor */
 .editor {
   width: 44%;
   height: 100%;
-  padding: 1% 0;
+  padding: 0;
   border: solid 1px black;
+  background-color: #141414;
 }
 
 #editor {

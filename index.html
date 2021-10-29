@@ -14,6 +14,9 @@
   <!-- Highlight -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <!-- Ace Themes -->
+  <link rel="stylesheet" href="https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/twilight.css">
+  <link rel="stylesheet" href="https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/github.css">
   <!-- Github Markdown -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.0.0/github-markdown.css">
   <!-- Local CSS -->
@@ -170,6 +173,7 @@
       </div>
 
       <div id="edit" class="col col-md-12 overflow-auto editor">
+        <button type="button" class="modeBtn" name="button" onclick="toggleLight()"> <i class="fas fa-sun fa-2x" id="modeIcon"></i></button>
         <div id="aceEditor"></div>
       </div>
 
@@ -200,6 +204,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Ace Editor -->
   <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U="></script>
+  <script src="https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/twilight.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://github.com/ajaxorg/ace/blob/master/lib/ace/theme/github.js" charset="utf-8"></script>
+  <script src="https://github.com/ajaxorg/ace/blob/master/lib/ace/mode/markdown.js" charset="utf-8"></script>
   <!-- Marked -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <!-- Purify -->

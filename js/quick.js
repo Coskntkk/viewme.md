@@ -1,7 +1,7 @@
 let nl = "\n";
 
 function updateMd(content) {
-  editor.setValue(editor.getValue() + `${content}`);
+  editor.session.insert(editor.getCursorPosition() || editor.session.getLength(), `${content}`);
   editor.gotoLine(editor.session.getLength());
 }
 
@@ -87,7 +87,7 @@ function tbl(t) {
     final = nl + `| Heading | Heading |
 | --- | --- |
 | Item | Item |
-| Item | Item |`
+| Item | Item |` + nl;
 } else if (t == 2 && $("#tableC").val()>0 && $("#tableR").val()>0) {
   let tCols = $("#tableC").val();
   let tRows = $("#tableR").val();
