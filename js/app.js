@@ -7,7 +7,14 @@ editor.setOptions({
   indentedSoftWrap: false,
   fontSize: 14
 });
-editor.setTheme("ace/theme/twilight");
+editor.setTheme("ace/theme/github");
+
+// Render Markdown
+function renderMd() {
+  $('#output').html(DOMPurify.sanitize(marked.parse(editor.getValue())));
+}
+renderMd();
+editor.gotoLine(editor.session.getLength());
 
 let isEdited = false;
 editor.on('change', () => {
@@ -15,10 +22,6 @@ editor.on('change', () => {
   renderMd();
 });
 
-// Render Markdown
-function renderMd() {
-  $('#output').html(DOMPurify.sanitize(marked(editor.getValue())));
-}
 
 // Download README.md file
 function download() {
@@ -37,6 +40,7 @@ function download() {
 
 // LIGHT THEMES
 let icon = $("#modeIcon");
+let day = true;
 
 // Light theme
 function lightDay() {
@@ -52,26 +56,14 @@ function lightNight() {
   $(".editor").css("background-color", "#141414");
 }
 
-// Auto theme depending on time
-let d = new Date();
-let hour = d.getHours();
-let day;
-if (hour <= 18 || hour >= 6) {
-  day = true;
-  lightDay();
-} else {
-  day = false;
-  lightNight();
-}
-
 // Toggle theme button
 function toggleLight() {
   if (day) {
     day = false;
-    lightDay();
+    lightNight();
   } else {
     day = true;
-    lightNight();
+    lightDay();
   }
 }
 /*
@@ -83,11 +75,4 @@ $(window).bind('beforeunload', function() {
 });
 */
 
-// Welcome script
-let welcomeScript = `# Welcome to Viewme.md Markdown Editor
 
-Start typing or use buttons to add quick templates.
-`;
-editor.setValue(welcomeScript);
-editor.gotoLine(editor.session.getLength());
-renderMd();
